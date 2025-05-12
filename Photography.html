@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Work</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Teko:wght@300&display=swap");
+
+    header img {
+      position: absolute;
+      top: 30px;
+      left: 50px;
+      height: 60px;
+    }
+
+    nav {
+      background-color: #e9eff6;
+      font-family: "playfair";
+      padding: 10px 30px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      text-align: center;
+      position: relative; 
+    }
+
+    .navs {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: right;
+    }
+
+    .navs li {
+      margin: 0 15px;
+      position: relative; 
+    }
+
+    .navs a {
+      color: #80a2c9;
+      font-size: 18px;
+      text-decoration: none;
+      padding: 16px 32px;
+      display: block;
+    }
+
+    .navs a:hover {
+      background-color: #fefefe;
+      padding: 16px 32px;
+      border-radius: 10px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdownmenu {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 220px;
+      text-align: left;
+      z-index: 10;
+    }
+
+    .dropdownmenu li {
+      padding: 13px;
+    }
+
+    .dropdownmenu a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      font-size: 15px;
+    }
+
+    .dropdownmenu a:hover {
+      background-color: #80a2c9;
+      border-radius: 10px;
+    }
+
+    .dropdown:hover .dropdownmenu {
+      display: block;
+      border-radius: 10px;
+    }
+
+    body {
+        font-family: "Libre Caslon Display", serif;
+        font-weight: 400;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        background-color: #ffffff;
+        margin: 0;
+    }
+
+    h1 { 
+        font-size: 75px;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 30px;
+        margin-left: 5%;
+    }
+
+    .set1 h1 {
+        font-weight: 300;
+        font-style: normal;
+        text-align: left;
+        font-size: 75px;
+        margin-left: 5%;
+        margin-top: 30px;
+    }
+
+    .set1 {
+        padding: 40px;
+        background-color: #fff;
+    }
+
+    .section-content {
+        background-color:#e9eff6;
+        display: flex;
+        justify-content: space-between;
+        padding: 4%;
+    }
+
+    .text {
+        text-align: left;
+        width: 35%;
+        color: #333;
+        padding-right: 4%;
+    }
+
+    .text h2 {
+        font-family: "Teko", sans-serif;
+        font-weight: 300;
+        margin-left: 4%;
+        font-size: 50px;
+        margin-bottom: -4%;
+    }
+
+    .text h3 {
+        margin-left: 5%;
+        margin-left: 20px;
+    }
+
+    .text p {
+        font-size: 16px;
+        color: #666;
+        margin-left: 20px;
+        line-height: 1.6em;
+    }
+
+    .images {
+        width: 60%;
+        padding: 4%;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+    }
+
+    .grid img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .set2 {
+        padding: 40px;
+        background-color: #fff;
+    }
+
+    .left-images {
+        width: 45%; 
+        padding: 4%;
+    }
+
+    .left-images img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .right-text {
+        padding-left: 8%;
+        width: 50%; 
+        text-align: left;
+    }
+
+    .right-text h2 {
+        font-family: "Teko", sans-serif;
+        font-weight: 300;
+        font-size: 50px;
+        margin-bottom: -4%;
+    }
+
+    .right-text h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .right-text p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.6em;
+        margin-right: 80px;
+    }
+
+    .set3 {
+        padding: 40px;
+        background-color: #fff;
+        margin-bottom: 8%;
+    }
+
+    .Chongqing {
+        background-color: #e9eff6;
+        display: flex; 
+        justify-content: space-between;
+        gap: 30px; 
+        align-items: flex-start;
+        margin-bottom: 40px;
+        padding: 4%;
+        flex-direction: row-reverse;
+    }
+
+    .right-images {
+        width: 45%;
+        padding: 4%;
+    }
+
+    .right-images img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .left-text {
+        padding-left: 4%;
+        width: 35%;
+        text-align: left;
+        color: #333;
+    }
+
+    .left-text h2 {
+        font-family: "Teko", sans-serif;
+        font-weight: 300;
+        margin-left: 4%;
+        font-size: 50px;
+        margin-bottom: -4%;
+    }
+
+    .left-text h3 {
+        margin-left: 5%;
+        margin-left: 20px;
+    }
+
+    .left-text p {
+        font-size: 16px;
+        color: #666;
+        margin-left: 20px;
+        line-height: 1.6em;
+    }
+
+    footer {
+      margin-top: -8%;
+      background-color: #e9eff6;
+      text-align: left;
+    }
+
+    .footer-container {
+      padding: 5%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    .footer-logo, .footer-gallery, .footer-quicklink, .footer-connect {
+      flex: 1;
+      margin: 0 100px; 
+    }
+
+    .footer-logo img {
+      width: 100px; 
+    }
+
+    .footer-gallery h3, .footer-quicklink h3, .footer-connect h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      width: 110px;
+    }
+
+    .footer-gallery ul, .footer-quicklink ul, .footer-connect ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-gallery li, .footer-quicklink li, .footer-connect li {
+      margin: 8px 0;
+    }
+
+    .footer-gallery a, .footer-quicklink a, .footer-connect a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .footer-gallery a:hover, .footer-quicklink a:hover, .footer-connect a:hover {
+      color: #93b3d8;
+    }
+
+    .footer-quicklink a {
+      display: block; 
+    }
+
+    .footer-connect input {
+      padding: 8px;
+      width: 70%;
+      margin-right: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .footer-connect button {
+      padding: 8px 15px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .footer-connect button:hover {
+      background-color: #93b3d8;
+    } 
+</style>
+
+<body>
+    <nav>
+        <ul class="navs">
+          <li><a href="Index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="Gallery.html">Gallery</a>
+            <ul class="dropdownmenu">
+              <li><a href="Photography.html">Photography</a></li>
+              <li><a href="Graphic Design.html">Graphic Design</a></li>
+              <li><a href="Logo Design.html">Logo Design</a></li>
+            </ul>
+          </li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <header>
+        <img src="Images/Logo.png" alt="Logo">
+        <h1>Photography</h1>
+      </header>
+
+    <div class="set1">
+        <div class="section-content">
+            <div class="text">
+                <h2>Product Photography</h2>
+                <h3>Silkyo Toronto <br>
+                    September 2024 - Current</h3>
+                <p>Developed high-quality photography skills by capturing product images and videos for jewelry marketing campaigns.</p>
+                <p>My contribution includes setting up lighting, directing poses, and ensuring the focus is on both the product and the individual, creating compelling visuals that blend style and elegance.</p>
+            </div>
+            <div class="images">
+                <div class="grid">
+                    <img src="Images/IMG1.jpeg" alt="Photo 1">
+                    <img src="Images/IMG2.jpeg" alt="Photo 2">
+                    <img src="Images/IMG3.jpeg" alt="Photo 3">
+                    <img src="Images/IMG4.jpeg" alt="Photo 4">
+                    <img src="Images/IMG5.jpeg" alt="Photo 5">
+                    <img src="Images/IMG6.jpeg" alt="Photo 6">
+                    <img src="Images/IMG7.jpeg" alt="Photo 7">
+                    <img src="Images/IMG8.jpeg" alt="Photo 8">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="set2">
+        <div class="section-content">
+            <div class="left-images">
+                <img src="Images/Img9.jpeg" alt="Portrait1">
+                <img src="Images/Img12.jpg" alt="Portrait2">
+                <img src="Images/Img11.JPG" alt="Portrait3">
+                <img src="Images/Img10.jpg" alt="Portrait4">
+            </div>
+    
+            <div class="right-text">
+                <h2>Portrait</h2>
+                <h3>Model: Jessica <br> Date: June 2024</h3>
+                <p>This is a set of artistic photos I took for my little sister's birthday. The photos captured her smile, innocence, and unique personality using thoughtful lighting and composition. I focused on her natural expressions, capturing her genuine emotions to create images that tell a story. These photos will be happy memory for her five years-old birthday, preserving those special moments forever.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="set3">
+        <div class="Chongqing">
+            <div class="right-images">
+                <img src="Images/Img6.JPG" alt="Photography1">
+                <img src="Images/Img7.jpg" alt="Photography2">
+                <img src="Images/Img8.JPG" alt="Photography3">
+                <img src="Images/Photography.JPG" alt="Photography4">
+            </div>
+    
+            <div class="left-text">
+                <h2>Composition</h2>
+                <h3>City of Chongqing <br> May 2024</h3>
+                <p>During my visit to Chongqing, I captured the city's unique blend of bustling nightlife, historic streets, and towering skyscrapers, highlighting its mix of tradition and modernity. I also documented the excitement of attending a concert, where the lights and music energized the city. This trip was both a visual and musical experience, and each photo reflects my memories and emotions of Chongqing.</p>
+            </div>
+        </div>
+    </div>
+    
+    </section>    
+    
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-logo">
+      <img src="Images/Logo.png" alt="Logo">
+    </div>
+
+    <div class="footer-gallery">
+      <h3>Gallery</h3>
+      <ul>
+        <li><a href="Photography.html">Photography</a></li>
+        <li><a href="Graphic Design.html">Graphic Design</a></li>
+        <li><a href="Logo Design.html">Logo Design</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-quicklink">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-connect">
+      <h3>Connect</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/emily-he-b638b8252" target="_blank">LinkedIn</a></li>
+        <li><a href="emilyhe.i0923@gmail.com">Email</a></li>
+        <li><a href="https://www.instagram.com/hxl_emily/" target="_blank">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

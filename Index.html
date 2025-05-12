@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewpoint" content="width=device-width", initial-scal="1.0">
+
+      <title>Emily He's Portfolio</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+  </head>
+  
+  <style>
+      @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Teko:wght@300&display=swap");
+   
+    body {
+      font-family: "Libre Caslon Display", serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+    }
+
+    header img {
+        position: absolute;
+        top: 30px;
+        left: 50px;
+        height: 60px;
+        }
+
+    nav {
+       font-family: playfair;
+        background-color: #e9eff6;
+        padding: 10px 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        position: relative; 
+        }
+
+    .navs {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: right;
+    }
+
+    .navs li {
+      margin: 0 15px;
+      position: relative; 
+    }
+
+    .navs a {
+      color: #80a2c9;
+      font-size: 18px;
+      padding: 16px 32px;
+      display: block;
+    }
+
+    .navs a:hover {
+      background-color: #fefefe;
+      padding: 16px 32px;
+      border-radius: 10px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdownmenu {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 220px;
+      text-align: left;
+      z-index: 10;
+    }
+
+    .dropdownmenu li {
+      padding: 13px;
+    }
+
+    .dropdownmenu a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      font-size: 15px;
+    }
+
+    .dropdownmenu a:hover {
+      background-color: #80a2c9;
+      border-radius: 10px;
+    }
+
+    .dropdown:hover .dropdownmenu {
+      display: block;
+      border-radius: 10px;
+    }
+
+    header {
+      font-family: "Teko", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      display: inline;
+    }
+
+    header h1 {
+      font-family: "Teko", sans-serif;
+      font-weight: 300;
+      font-size: 75px;
+      color: #333;
+      margin: 0;
+      padding-top: 30px;
+    }
+
+    section {
+      padding: 10px;
+      text-align: center;
+    }
+
+    #home {
+      background-color: #fff;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    #home p {
+      font-size: 16px;
+      line-height: 1.8em;
+      margin-left: 23%;
+      margin-right: 23%;
+    }
+
+    .button {
+      border: none;
+      color: white;
+      padding: 16px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+    
+    .button1 {
+      background-color: white; 
+      color: black; 
+      border: 2px solid #80a2c9;
+    }
+
+    .button1:hover {
+      background-color: #93b3d8;
+      color: white;
+    }  
+
+    #gallery{
+      text-align: center;
+    }
+
+    #gallery img {
+      width: 50%;
+      height: auto;
+      border: 10px solid #e9eff6;  
+      margin: 3%;
+      margin-bottom: 6%;
+    }
+
+    #personal-identity{
+      background-color: #f9f9f9;
+      padding-top: 40px;
+      padding-left: 15%;
+      padding-right: 15%;
+      padding-bottom: 5%;
+      line-height: 1.6em;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    #personal-identity h2{
+      font-family: "Teko", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 55px;
+    }
+    
+    #work-container {
+      overflow: hidden;
+      margin-bottom: 8%;
+      margin-top: 4%;
+    }
+
+    #experience {
+      float: left;
+      width: 50%;
+      margin-left: 5%; 
+      margin-top: -30px;
+    }
+
+    #experience p {
+      margin-left: 20%; 
+      margin-right: 15%;
+      line-height: 1.7em;
+      font-size: 18px; 
+      margin-top: -5%;
+    }
+
+    #experience h2 {
+      font-weight: 400;
+      font-family: "Teko", sans-serif;
+      font-size: 55px;
+      margin-left: 20%;
+      margin-right: 10%; 
+    }
+
+    #experience nav {
+      background-color: white;
+      text-align: left;
+      margin-left: 13%;
+      margin-top: -4%;
+    }
+
+    #experience nav a {
+      display: inline; 
+      color:#93b3d8;
+      margin-left: 10px; 
+      padding: 5px 10px;
+    }
+    
+    a{
+      text-decoration: none;
+    }
+
+    #work {
+      float: left;
+      width: 40%; 
+      margin-top: 8%;
+      margin-left: 20px;
+    }
+
+    .work-summary {
+      display: block;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .work-summary img {
+      max-width: 90px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 10px;
+      border: 2px solid #e9eff6;
+      float: left;
+      margin-right: 40px;
+    }
+
+    .work-summary .work-info {
+      text-align: left;
+      float: left;
+      max-width: 70%;
+    }
+
+    .work-summary h3 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .work-summary p {
+      font-size: 16px;
+      margin: 5px 0px;
+      margin-right: 70px;
+    }
+
+    .work-summary .time {
+      font-size: 14px;
+      color: #888;
+    }
+
+    #sector{
+      border-top: 2px solid #e9eff6;
+      padding-bottom: 3%;
+      margin-top: -3%;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    #education-section {
+      margin-top: -5%;
+      margin-bottom: 50px;
+      margin-right: 30%;
+    }
+
+    #education-section h2 {
+      font-family: "Teko", sans-serif;
+      font-weight: 400;
+      font-size: 55px;
+      text-align: left;
+      margin-left: 22%;
+      margin-bottom: 20px;
+    }
+
+    .education-container {
+      margin-top: -3%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      font-size: 18px;
+    }
+
+    .education-info {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .education-info p {
+      width: 400px;
+      margin: 20px 45%;
+    }
+
+    #contact-section {
+      background-color: #f4f8fd;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 100px;
+    }
+
+    #contact-section h2 {
+      font-family: "Teko", sans-serif;
+      font-weight: 400;
+      font-size: 55px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 500px;
+      margin: 10px auto;
+    }
+
+    label {
+      font-size: 18px;
+      font-weight: 500;
+      text-align: left;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #80a2c9;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 16px;
+      background-color: #80a2c9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block; 
+      margin: 10px auto;
+      width: 100px;
+    }
+
+    button a{
+    text-decoration: none;
+    }
+    button:hover {
+      background-color: #93b3d8;
+    }
+    
+    footer {
+      margin-top: -8%;
+      background-color: #e9eff6;
+      text-align: left;
+    }
+
+    .footer-container {
+      padding: 5%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    .footer-logo, .footer-gallery, .footer-quicklink, .footer-connect {
+      flex: 1;
+      margin: 0 100px; 
+    }
+
+    .footer-logo img {
+      width: 100px; 
+    }
+
+    .footer-gallery h3, .footer-quicklink h3, .footer-connect h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      width: 110px;
+    }
+
+    .footer-gallery ul, .footer-quicklink ul, .footer-connect ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-gallery li, .footer-quicklink li, .footer-connect li {
+      margin: 8px 0;
+    }
+
+    .footer-gallery a, .footer-quicklink a, .footer-connect a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .footer-gallery a:hover, .footer-quicklink a:hover, .footer-connect a:hover {
+      color: #93b3d8;
+    }
+
+    .footer-quicklink a {
+      display: block; 
+    }
+
+    .footer-connect input {
+      padding: 8px;
+      width: 70%;
+      margin-right: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .footer-connect button {
+      padding: 8px 15px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .footer-connect button:hover {
+      background-color: #93b3d8;
+    } 
+  
+   </style>
+  
+  <body>
+      <nav>
+        <ul class="navs">
+          <li><a href="Index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="Gallery.html">Gallery</a>
+            <ul class="dropdownmenu">
+              <li><a href="Photography.html">Photography</a></li>
+              <li><a href="Graphic Design.html">Graphic Design</a></li>
+              <li><a href="Logo Design.html">Logo Design</a></li>
+            </ul>
+          </li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    <div id="home">
+      <header>
+        <img src="Images/Logo.png" alt="Logo">
+        <h1>Emily He's Portfolio</h1>
+      </header>
+      <p>Hi, I'm Emily. I'm currently a second-year student at the University of Waterloo, 
+        majoring in Global Business and Digital Arts. I've developed an expertise in Adobe 
+        software and Google Workspace, which I use to create visually engaging and impactful
+        work. I enjoy the design and creativity industries due to the ability to 
+        communicate powerful stories through visuals. I'm passionate about applying 
+        my skills to create new and original content that stands out in today's 
+        fast-paced digital world.
+      </p>
+    <div id="experience nav">
+      <a href="Gallery.html">
+        <button class="button button1">Gallery</button>
+      </a>
+    </div>
+  </div>
+
+    <div id="gallery">
+      <img src="Images/Me.JPG" alt="Portfolio Image of myself">
+    </div>
+
+    <div id="personal-identity">
+      <h2>Personal Identity</h2>
+      <p>Enthusiastic Global Business and Digital Arts student with a strong foundation in organizational skills 
+        and fluent in collaborating within team settings, demonstrating a flexible and adaptable approach to work. 
+        Skilled in balancing academic responsibilities with extracurricular activities, I am eager to apply my 
+        interpersonal and multitasking abilities in a dynamic service environment.
+      </p>
+    </div>
+
+<div id="work-container">
+  <div id="experience">
+      <h2>Work Experience</h2>
+      <p>I have experience in product photography and visual content creation from my current role at Silkyo Jewelry, 
+        where I capture high-quality product images and design promotional materials for marketing campaigns. 
+        In my previous role as a waitress at Tenren's Tea helped me develop strong customer service, time management, 
+        and communication skills. Additionally, as a supervisor and child-care provider at Ensquare Academy, I honed my 
+        organizational skills by coordinating activities and fostering a safe, welcoming environment for children. 
+      </p>
+      <nav>
+        <div id="extension">
+          <a href="Gallery.html">Learn more</a>
+        </div>
+      </nav>
+   </div>
+
+   <div id="work">
+      <div class="work-summary">
+        <img src="Images/Silkyo Logo.jpg" alt="Silkyo Jewelry Logo">
+        <div class="work-info">
+          <h3>Silkyo Jewelry, Waterloo ON</h3>
+          <p>Product Photographer & Visual Content Creator</p>
+          <p class="time">September 2024 - Present</p>
+        </div>
+      </div>
+
+      <div class="work-summary">
+        <img src="Images/Tenren's Tea Logo.jpg" alt="TenRen's Tea Logo">
+        <div class="work-info">
+          <h3>Tenren's Tea, Markham ON</h3>
+          <p>Waitress</p>
+          <p class="time">September 2021 - September 2024</p>
+        </div>
+      </div>
+
+      <div class="work-summary">
+        <img src="Images/Ensquare Academy Logo.jpeg" alt="Ensquare Academy Logo">
+        <div class="work-info">
+          <h3>Ensquare Academy, Markham ON</h3>
+          <p>Supervisor/Child-Care Provider</p>
+          <p class="time">July 2022 - September 2022</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="sector">
+  <h2> </h2>
+</div>
+
+<div id="education-section">
+  <h2>Education</h2>
+  <div class="education-container">
+    <div class="education-info">
+      <p>OSSD</p>
+      <p>Bachelor in Global Business and Digital Art</p>
+    </div>
+    <div class="education-info">
+      <p>2019 - 2023</p>
+      <p>2023 - Current</p>
+    </div>
+  </div>
+</div>
+
+<div id="contact-section">
+  <h2>Want to get in touch?</h2>
+  <form action="#" method="post">
+    <label for="name">NAME</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="email">EMAIL ADDRESS</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="message">MESSAGE</label>
+    <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-logo">
+      <img src="Images/Logo.png" alt="Logo">
+    </div>
+
+    <div class="footer-gallery">
+      <h3>Gallery</h3>
+      <ul>
+        <li><a href="Photography.html">Photography</a></li>
+        <li><a href="Graphic Design.html">Graphic Design</a></li>
+        <li><a href="Logo Design.html">Logo Design</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-quicklink">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-connect">
+      <h3>Connect</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/emily-he-b638b8252" target="_blank">LinkedIn</a></li>
+        <li><a href="emilyhe.i0923@gmail.com">Email</a></li>
+        <li><a href="https://www.instagram.com/hxl_emily/" target="_blank">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Teko:wght@300&display=swap");
+
+    header img {
+        position: absolute;
+        top: 30px;
+        left: 50px;
+        height: 60px;
+        }
+
+    nav {
+        background-color: #e9eff6;
+        font-family: "playfair";
+        padding: 10px 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        position: relative; 
+        }
+
+    .navs {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: right;
+    }
+
+    .navs li {
+      margin: 0 15px;
+      position: relative; 
+    }
+
+    .navs a {
+      color: #80a2c9;
+      font-size: 18px;
+      text-decoration: none;
+      padding: 16px 32px;
+      display: block;
+    }
+
+    .navs a:hover {
+      background-color: #fefefe;
+      padding: 16px 32px;
+      border-radius: 10px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdownmenu {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 220px;
+      text-align: left;
+      z-index: 10;
+    }
+
+    .dropdownmenu li {
+      padding: 13px;
+    }
+
+    .dropdownmenu a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      font-size: 15px;
+    }
+
+    .dropdownmenu a:hover {
+      background-color: #80a2c9;
+      border-radius: 10px;
+    }
+
+    .dropdown:hover .dropdownmenu {
+      display: block;
+      border-radius: 10px;
+    }
+
+    body {
+        font-family: "Libre Caslon Display", serif;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        color: #333;
+    }
+
+    .project1 {
+        padding: 50px;
+        margin-bottom: 3%;
+    }
+
+    h1 { 
+        font-size: 75px;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 30px;
+        margin-left: 5%;
+    }
+
+    .project-info {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 40px;
+        text-align: left;
+        margin-left: 5%;
+    }
+
+    .project-details {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .project-details h2 {
+        font-family: "Teko", sans-serif;
+        font-weight: 300;
+        font-size: 50px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .project-details h3 {
+        margin-top: 10px;
+        font-size: 20px;
+        margin-bottom: 5px;   
+    }
+
+    .project-details p {
+        font-size: 15px;
+        color: #777;
+        margin-bottom: 5px; 
+    }
+
+    .project-description {
+        flex: 2;
+        padding: 2%;
+        margin-right: 25px;
+        margin-top: -20px;
+        text-align: center;
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .project-image {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 30px; 
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .project-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .project2{
+        margin-bottom: 3%;
+    }
+
+    .project2 .project-info {
+        padding: 30px;
+    }
+
+    .project2 .project-image{
+        padding: 50px;
+        margin-top: -9%;
+    }
+
+    .project3{
+        margin-bottom: 3%;
+    }
+
+    .project3 .project-info {
+        padding: 30px;
+    }
+
+    .project3 .project-image{
+        padding: 50px;
+        margin-bottom: 8%;
+        margin-top: -9%;
+    }
+
+    footer {
+      margin-top: -8%;
+      background-color: #e9eff6;
+      text-align: left;
+    }
+
+    .footer-container {
+      padding: 5%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    .footer-logo, .footer-gallery, .footer-quicklink, .footer-connect {
+      flex: 1;
+      margin: 0 100px; 
+    }
+
+    .footer-logo img {
+      width: 100px; 
+    }
+
+    .footer-gallery h3, .footer-quicklink h3, .footer-connect h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      width: 110px;
+    }
+
+    .footer-gallery ul, .footer-quicklink ul, .footer-connect ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-gallery li, .footer-quicklink li, .footer-connect li {
+      margin: 8px 0;
+    }
+
+    .footer-gallery a, .footer-quicklink a, .footer-connect a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .footer-gallery a:hover, .footer-quicklink a:hover, .footer-connect a:hover {
+      color: #93b3d8;
+    }
+
+    .footer-quicklink a {
+      display: block; 
+    }
+
+    .footer-connect input {
+      padding: 8px;
+      width: 70%;
+      margin-right: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .footer-connect button {
+      padding: 8px 15px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .footer-connect button:hover {
+      background-color: #93b3d8;
+    } 
+
+
+</style>
+
+<body>
+    <nav>
+        <ul class="navs">
+          <li><a href="Index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="Gallery.html">Gallery</a>
+            <ul class="dropdownmenu">
+              <li><a href="Photography.html">Photography</a></li>
+              <li><a href="Graphic Design.html">Graphic Design</a></li>
+              <li><a href="Logo Design.html">Logo Design</a></li>
+            </ul>
+          </li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+        <header>
+            <img src="Images/Logo.png" alt="Logo">
+        </header>
+
+        <header>
+            <h1 class="title">Graphic Design</h1>
+        </header>
+
+    <div class="project1">
+        <div class="project-info">
+            <div class="project-details">
+                <h2>Poster Design</h2>
+                <h3>GBDA 101</h3>
+                <p>February 2024</p>
+            </div>
+
+            <div class="project-description">
+                <p>This diptych presents a parks and recreation advertising narrative, inviting audiences to explore their local parks for peace and connection with nature. The right poster, titled "Find your peace outdoors," emphasizes escaping city stress to find tranquility, using park benches and serene backgrounds to evoke calmness. The left poster, with bold text "Explore nature today," encourages immediate action. Both posters include QR codes for easy access to more information, evoking a sense of adventure and discovery, and urging interaction with the natural world.</p>
+            </div>
+        </div>
+
+        <div class="project-image">
+            <img src="Images/Poster.jpg" alt="Poster Design Image">
+        </div>
+    </div>
+
+    <div class="project2">
+        <div class="project-info">
+            <div class="project-details">
+                <h2>Magazine Design</h2>
+                <h3>GBDA 101</h3>
+                <p>April 2024</p>
+            </div>
+
+            <div class="project-description">
+                <p>The theme of the magazine is nature and growth, which refers to me in the field of design, going from a beginner to a skilled creator. Not only did I have to familiarize myself with tools in Adobe software, but I also had to understand the design principles, product composition and much more. Standing on the threshold of this course, I clearly recognize that I am a beginner who lacks expertise in this field, but I am passionate and interested in this career. Adobe's suite is a collection of possibilities, each of the tools helps me to create and refine the product to achieve creativity.
+                </p>
+            </div>
+        </div>
+
+        <div class="project-image">
+            <img src="Images/Mag1.jpg" alt="Magazine Design Image">
+            <img src="Images/Mag2.jpg" alt="Magazine Design Image">
+            <img src="Images/Mag3.jpg" alt="Magazine Design Image">
+            <img src="Images/Mag4.jpg" alt="Magazine Design Image">
+        </div>
+    </div>
+
+    <div class="project3">
+        <div class="project-info">
+            <div class="project-details">
+                <h2>Trifold Brochure Design</h2>
+                <h3>High School Project</h3>
+                <p>January 2023</p>
+            </div>
+
+            <div class="project-description">
+                <p>This is a tri-fold brochure travel schedule brief designed to demonstrate my graphic design and typography skills. By organizing the text and visual elements, I have designed a simple, clear and visually appealing tri-fold for travelers to quickly understand the schedule, highlights of the location and detailed transportation information. The whole design style is fresh and modern, and the color scheme is tightly integrated with the content structure to help readers get useful information in a visually appealing atmosphere.</p>
+            </div>
+        </div>
+
+        <div class="project-image">
+            <img src="Images/Tri1.jpg" alt="Triflod Design Image">
+            <img src="Images/Tri2.jpg" alt="Triflod Design Image">
+            <img src="Images/Tri3.jpg" alt="Triflod Design Image">
+        </div>
+    </div>
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-logo">
+      <img src="Images/Logo.png" alt="Logo">
+    </div>
+
+    <div class="footer-gallery">
+      <h3>Gallery</h3>
+      <ul>
+        <li><a href="Photography.html">Photography</a></li>
+        <li><a href="Graphic Design.html">Graphic Design</a></li>
+        <li><a href="Logo Design.html">Logo Design</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-quicklink">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-connect">
+      <h3>Connect</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/emily-he-b638b8252" target="_blank">LinkedIn</a></li>
+        <li><a href="emilyhe.i0923@gmail.com">Email</a></li>
+        <li><a href="https://www.instagram.com/hxl_emily/" target="_blank">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

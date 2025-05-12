@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Teko:wght@300&display=swap");
+    
+    header img {
+        position: absolute;
+        top: 30px;
+        left: 50px;
+        height: 60px;
+        }
+
+    nav {
+        font-family: playfair;
+        background-color: #e9eff6;
+        padding: 10px 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        position: relative; 
+        }
+
+    .navs {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: right;
+    }
+
+    .navs li {
+      margin: 0 15px;
+      position: relative; 
+    }
+
+    .navs a {
+      color: #80a2c9;
+      font-size: 18px;
+      text-decoration: none;
+      padding: 16px 32px;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .navs a:hover {
+      background-color: #fefefe;
+      padding: 16px 32px;
+      border-radius: 10px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdownmenu {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 220px;
+      text-align: left;
+      z-index: 10;
+    }
+
+    .dropdownmenu li {
+      padding: 13px;
+    }
+
+    .dropdownmenu a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      font-size: 15px;
+    }
+
+    .dropdownmenu a:hover {
+      background-color: #80a2c9;
+      border-radius: 10px;
+    }
+
+    .dropdown:hover .dropdownmenu {
+      display: block;
+      border-radius: 10px;
+    }
+
+    body {
+        font-family: "Libre Caslon Display", serif;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+        text-align: center;
+    }
+
+    .contact {
+        margin-top: -60px;
+        padding: 50px;
+        background-color: #fff;
+    }
+
+    .contact h1 {
+        font-family: "Teko", sans-serif;
+        font-weight: 300;
+        font-size: 80px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .contact-info p {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .contact-info a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .social-icons {
+        margin-top: 40px;
+    }
+
+    .social-icon {
+        margin: 0 15px;
+        display: inline-block;
+    }
+
+    .social-icon img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    #contact-section {
+      background-color: #f4f8fd;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 100px;
+    }
+
+    #contact-section h2 {
+      font-family: "Teko", sans-serif;
+      font-weight: 400;
+      font-size: 55px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 500px;
+      margin: 10px auto;
+    }
+
+    label {
+      font-size: 18px;
+      font-weight: 500;
+      text-align: left;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #80a2c9;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 16px;
+      background-color: #80a2c9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block; 
+      margin: 10px auto;
+      width: 100px;
+    }
+
+    button:hover {
+      background-color: #93b3d8;
+    }
+
+    footer {
+      margin-top: -8%;
+      background-color: #e9eff6;
+      text-align: left;
+    }
+
+    .footer-container {
+      padding: 5%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    .footer-logo, .footer-gallery, .footer-quicklink, .footer-connect {
+      flex: 1;
+      margin: 0 100px; 
+    }
+
+    .footer-logo img {
+      width: 100px; 
+    }
+
+    .footer-gallery h3, .footer-quicklink h3, .footer-connect h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      width: 110px;
+    }
+
+    .footer-gallery ul, .footer-quicklink ul, .footer-connect ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-gallery li, .footer-quicklink li, .footer-connect li {
+      margin: 8px 0;
+    }
+
+    .footer-gallery a, .footer-quicklink a, .footer-connect a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .footer-gallery a:hover, .footer-quicklink a:hover, .footer-connect a:hover {
+      color: #93b3d8;
+    }
+
+    .footer-quicklink a {
+      display: block; 
+    }
+
+    .footer-connect input {
+      padding: 8px;
+      width: 70%;
+      margin-right: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .footer-connect button {
+      padding: 8px 15px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .footer-connect button:hover {
+      background-color: #93b3d8;
+    } 
+</style>
+
+<body>
+    <nav>
+        <ul class="navs">
+          <li><a href="Index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="Gallery.html">Gallery</a>
+            <ul class="dropdownmenu">
+              <li><a href="Photography.html">Photography</a></li>
+              <li><a href="Graphic Design.html">Graphic Design</a></li>
+              <li><a href="Logo Design.html">Logo Design</a></li>
+            </ul>
+          </li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    <div id="home">
+      <header>
+        <img src="Images/Logo.png" alt="Logo">
+      </header>
+    </div>
+
+    <div class="contact">
+        <h1>Contact</h1>
+        <div class="contact-info">
+            <p>Name: Emily He</p>
+            <p>Email Address: <a href="mailto:emilyhe.i0923@gmail.com">emilyhe.i0923@gmail.com</a></p>
+            <p>Phone Number: +1 (416)723-3778</p>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/emily-he-b638b8252" target="_blank" class="social-icon">
+                <!--LinkedIn. “File:Linkedin Icon.Svg.” Wikipedia, Wikimedia Foundation, 14 Jan. 2014, en.m.wikipedia.org/wiki/File:LinkedIn_icon.svg. Accessed 06 Apr. 2025. -->
+                <img src="Images/LinkedIn.png" alt="LinkedIn">
+            </a>
+                <!--Spalter, Ian. “File:Instagram Icon.Png.” Wikipedia, 2016, commons.wikimedia.org/wiki/File:Instagram_icon.png. Accessed 07 Apr. 2025. -->
+            <a href="https://www.instagram.com/hxl_emily/" target="_blank" class="social-icon">
+                <img src="Images/Instagram.png" alt="Instagram">
+            </a>
+                <!--Uniconlabs. FlatIcon, www.flaticon.com/free-icons/email. Accessed 07 Apr. 2025. -->
+            <a href="mailto:emilyhe.i0923@gmail.com" class="social-icon">
+                <img src="Images/Email.png" alt="Email">
+            </a>
+        </div>
+    </div>
+
+    <div id="contact-section">
+        <h2>Want to get in touch?</h2>
+        <form action="#" method="post">
+          <label for="name">NAME</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      
+          <label for="email">EMAIL ADDRESS</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      
+          <label for="message">MESSAGE</label>
+          <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+      
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-logo">
+      <img src="Images/Logo.png" alt="Logo">
+    </div>
+
+    <div class="footer-gallery">
+      <h3>Gallery</h3>
+      <ul>
+        <li><a href="Photography.html">Photography</a></li>
+        <li><a href="Graphic Design.html">Graphic Design</a></li>
+        <li><a href="Logo Design.html">Logo Design</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-quicklink">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-connect">
+      <h3>Connect</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/emily-he-b638b8252" target="_blank">LinkedIn</a></li>
+        <li><a href="emilyhe.i0923@gmail.com">Email</a></li>
+        <li><a href="https://www.instagram.com/hxl_emily/" target="_blank">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Teko:wght@300&display=swap");
+
+    header img {
+        position: absolute;
+        top: 30px;
+        left: 50px;
+        height: 60px;
+        }
+
+    nav {
+        font-family: playfair;
+        background-color: #e9eff6;
+        padding: 10px 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        position: relative; 
+        }
+
+    .navs {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: right;
+    }
+
+    .navs li {
+      margin: 0 15px;
+      position: relative; 
+    }
+
+    .navs a {
+      color: #80a2c9;
+      font-size: 18px;
+      text-decoration: none;
+      padding: 16px 32px;
+      display: block;
+    }
+
+    .navs a:hover {
+      background-color: #fefefe;
+      padding: 16px 32px;
+      border-radius: 10px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdownmenu {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 220px;
+      text-align: left;
+      z-index: 10;
+    }
+
+    .dropdownmenu li {
+      padding: 13px;
+    }
+
+    .dropdownmenu a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      font-size: 15px;
+    }
+
+    .dropdownmenu a:hover {
+      background-color: #80a2c9;
+      border-radius: 10px;
+    }
+
+    .dropdown:hover .dropdownmenu {
+      display: block;
+      border-radius: 10px;
+    }
+
+    body {
+        font-family: "Libre Caslon Display", serif;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        color: #333;
+    }
+
+    .project1 {
+        padding: 50px;
+        background-color: rgb(247, 251, 255);
+    }
+
+    h1 {
+        font-size: 75px;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 30px;
+        margin-left: 5%;
+    }
+
+    .project-info {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 40px;
+        text-align: left;
+        margin-left: 5%;
+    }
+
+    .project-details {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .project-details h2 {
+        font-family: "Teko", sans-serif;
+        font-weight: 300;
+        font-size: 50px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .project-details h3 {
+        margin-top: 10px;
+        font-size: 20px;
+        margin-bottom: 5px;    
+    }
+
+    .project-details p {
+        font-size: 15px;
+        color: #777;
+        margin-bottom: 5px; 
+    }
+
+    .project-description {
+        flex: 2;
+        padding: 2%;
+        margin-right: 25px;
+        text-align: center;
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .project-image {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 30px; 
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .project-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .project2{
+        background-color: rgb(247, 251, 255);
+    }
+
+    .project2 .project-info {
+        padding: 30px;
+        margin-bottom: 5%;
+    }
+
+    .project2 .project-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding-bottom: 12%;
+    }
+
+    .project2 .project-image img {
+        width: 100%; 
+        height: auto;
+        max-width: 900px; 
+        border-radius: 8px;
+    }
+
+    footer {
+      margin-top: -8%;
+      background-color: #e9eff6;
+      text-align: left;
+    }
+
+    .footer-container {
+      padding: 5%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    .footer-logo, .footer-gallery, .footer-quicklink, .footer-connect {
+      flex: 1;
+      margin: 0 100px; 
+    }
+
+    .footer-logo img {
+      width: 100px; 
+    }
+
+    .footer-gallery h3, .footer-quicklink h3, .footer-connect h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      width: 110px;
+    }
+
+    .footer-gallery ul, .footer-quicklink ul, .footer-connect ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-gallery li, .footer-quicklink li, .footer-connect li {
+      margin: 8px 0;
+    }
+
+    .footer-gallery a, .footer-quicklink a, .footer-connect a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .footer-gallery a:hover, .footer-quicklink a:hover, .footer-connect a:hover {
+      color: #93b3d8;
+    }
+
+    .footer-quicklink a {
+      display: block; 
+    }
+
+    .footer-connect input {
+      padding: 8px;
+      width: 70%;
+      margin-right: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .footer-connect button {
+      padding: 8px 15px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .footer-connect button:hover {
+      background-color: #93b3d8;
+    } 
+</style>
+
+<body>
+    <nav>
+        <ul class="navs">
+          <li><a href="Index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="Gallery.html">Gallery</a>
+            <ul class="dropdownmenu">
+              <li><a href="Photography.html">Photography</a></li>
+              <li><a href="Graphic Design.html">Graphic Design</a></li>
+              <li><a href="Logo Design.html">Logo Design</a></li>
+            </ul>
+          </li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <img src="Images/Logo.png" alt="Logo">
+    </header>
+
+    <header>
+        <h1 class="title">Logo Design</h1>
+    </header>
+
+    <div class="project1">
+        <div class="project-info">
+            <div class="project-details">
+                <h2>Logo Design</h2>
+                <h3>GBDA 101</h3>
+                <p>March 2024</p>
+            </div>
+
+            <div class="project-description">
+                <p>The logo blends love, adventure, and creativity. Its light bulb shape symbolizes ideas, while also resembling a hot-air balloon for adventure. A central heart highlights passion and meaningful connections. Triangles represent mountains for adventure, and cloud-like forms suggest a chef hat, reflecting my client’s love of exploring new cuisines.</p>
+            </div>
+        </div>
+
+        <div class="project-image">
+            <img src="Images/Logo Design.jpg" alt="Poster Design Image">
+        </div>
+    </div>
+
+    <div class="project2">
+        <div class="project-info">
+            <div class="project-details">
+                <h2>Personal Branding</h2>
+                <h3>High School Project</h3>
+                <p>September 2022</p>
+            </div>
+
+            <div class="project-description">
+                <p>This logo design is inspired by my initials “EH”. The two “E's” form the delicate wings of the butterfly, while the “H” is the butterfly's tentacles. The tentacles gracefully connect the wings to the butterfly's body, creating a sense of flow and balance.</p>
+            </div>
+        </div>
+
+        <div class="project-image">
+            <img src="Images/PB1.jpg" alt="Personal branding Image">
+            <img src="Images/PB2.jpg" alt="Personal branding Image">
+            <img src="Images/PB3.jpg" alt="Personal branding Image">
+            <img src="Images/Logos.jpg" alt="Personal branding Image">
+        </div>
+    </div>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-logo">
+      <img src="Images/Logo.png" alt="Logo">
+    </div>
+
+    <div class="footer-gallery">
+      <h3>Gallery</h3>
+      <ul>
+        <li><a href="Photography.html">Photography</a></li>
+        <li><a href="Graphic Design.html">Graphic Design</a></li>
+        <li><a href="Logo Design.html">Logo Design</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-quicklink">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-connect">
+      <h3>Connect</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/emily-he-b638b8252" target="_blank">LinkedIn</a></li>
+        <li><a href="emilyhe.i0923@gmail.com">Email</a></li>
+        <li><a href="https://www.instagram.com/hxl_emily/" target="_blank">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
